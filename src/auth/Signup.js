@@ -7,9 +7,10 @@ const Signup = (props) => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch('http://localhost:3000/user/register', {
+
+        fetch('http://localhost:5000/user/register', {
             method: 'POST',
-            body: JSON.stringify({user:{username, password: password}}),
+            body: JSON.stringify({user:{username: username, password: password}}),
             headers: new Headers({
                 'Content-Type': 'application/json'
             })
